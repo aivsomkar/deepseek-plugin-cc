@@ -65,7 +65,21 @@ export DEEPSEEK_PROVIDER=openrouter
 
 Reload your shell: `source ~/.zshrc`
 
-### Step 2: Install the plugin in Claude Code
+### Step 2: Install the CLI globally
+
+```bash
+npm install -g github:aivsomkar/deepseek-plugin-cc
+```
+
+Verify it works:
+
+```bash
+deepseek
+# Usage: deepseek <command> [options] [args]
+# Commands: chat, review, rescue, tests, script
+```
+
+### Step 3: Install the plugin in Claude Code
 
 Open Claude Code and run these three commands:
 
@@ -75,9 +89,13 @@ Open Claude Code and run these three commands:
 /reload-plugins
 ```
 
-### Step 3: Verify
+### Step 4: Verify
 
-```
+```bash
+# From your terminal (CLI)
+deepseek chat say hello in one word
+
+# Or from inside Claude Code (slash command)
 /deepseek:chat say hello in one word
 ```
 
@@ -117,8 +135,8 @@ export DEEPSEEK_MODEL=deepseek-reasoner
 
 Pass `--model <name>` to any command to override for that invocation:
 
-```
-/deepseek:rescue refactor the auth module --model deepseek-reasoner
+```bash
+deepseek rescue --model deepseek-reasoner refactor the auth module
 ```
 
 ---

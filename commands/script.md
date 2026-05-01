@@ -7,5 +7,5 @@ argument-hint: "[--model deepseek-chat|deepseek-reasoner] <description of what t
 Run this command and stream the output:
 
 ```bash
-node "$CLAUDE_PLUGIN_DIR/scripts/deepseek-script.js" $ARGUMENTS
+deepseek script $ARGUMENTS
 ```

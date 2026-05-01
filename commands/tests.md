@@ -7,5 +7,5 @@ argument-hint: "[--model deepseek-chat|deepseek-reasoner] [--framework jest|vite
 Run this command and stream the output:
 
 ```bash
-node "$CLAUDE_PLUGIN_DIR/scripts/deepseek-tests.js" $ARGUMENTS
+deepseek tests $ARGUMENTS
 ```
