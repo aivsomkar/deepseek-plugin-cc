@@ -1,0 +1,6 @@
+{
+  "name": "deepseek-plugin-cc",
+  "version": "1.0.0",
+  "description": "Use DeepSeek models from Claude Code — chat, code review, task rescue, test generation, and script writing.",
+  "author": { "name": "aivsomkar" }
+}

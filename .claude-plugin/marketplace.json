@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "deepseek-plugin-cc",
+  "owner": { "name": "aivsomkar" },
+  "plugins": [
+    {
+      "name": "deepseek-plugin-cc",
+      "version": "1.0.0",
+      "source": "./",
+      "category": "integrations"
+    }
+  ]
+}
