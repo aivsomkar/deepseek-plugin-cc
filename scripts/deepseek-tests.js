@@ -1,6 +1,7 @@
 import { parseArgs, resolveProvider, resolveModel, resolveApiKey, resolveEndpoint, streamChat } from './deepseek-core.js';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 export function detectFramework(cwd) {
   const pkgPath = join(cwd, 'package.json');
@@ -20,7 +21,7 @@ export function detectFramework(cwd) {
 }
 
 // Only execute when run directly, not when imported by tests
-const isMain = process.argv[1] === new URL(import.meta.url).pathname;
+const isMain = process.argv[1] === fileURLToPath(import.meta.url);
 
 if (isMain) {
   const rawArgs = process.argv.slice(2);

@@ -32,6 +32,13 @@ test('detectFramework: detects mocha', () => {
   rmSync(dir, { recursive: true });
 });
 
+test('detectFramework: detects jasmine', () => {
+  const dir = tempDir();
+  writeFileSync(join(dir, 'package.json'), JSON.stringify({ devDependencies: { jasmine: '^5.0.0' } }));
+  assert.equal(detectFramework(dir), 'jasmine');
+  rmSync(dir, { recursive: true });
+});
+
 test('detectFramework: detects pytest from pyproject.toml', () => {
   const dir = tempDir();
   writeFileSync(join(dir, 'pyproject.toml'), '[tool.pytest.ini_options]\n');
